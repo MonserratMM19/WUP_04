@@ -44,7 +44,7 @@ basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
 
 basicCN + geom_boxplot()
 ```
-
+This graph shows that there's some significant statistical differences among this collection of numerical explained by categorical variables. as all the different school levels seem to be in different to be in different areas some meet. 
 
 ### Numerical Descriptive Results
 
