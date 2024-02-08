@@ -53,6 +53,7 @@ This graph shows that there's some significant statistical differences among thi
 ```{r}
 favstats(WORDSUM~DEGREE,data=GSScsv)
 ```
+Based on the data, it appears that graduates have the highest median value compared to all other categories. Additionally, the third quarterly values of high school, students, and light high school students are relatively close and smaller than all the other values. It is worth noting that light high school students have the overall lowest median and mean values.
 
 ## Inferential Results
 
