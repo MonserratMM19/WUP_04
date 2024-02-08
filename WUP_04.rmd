@@ -44,11 +44,15 @@ basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
 
 basicCN + geom_boxplot()
 ```
-This graph shows that there's some significant statistical differences among this collection of numerical explained by categorical variables. as all the different school levels seem to be in different to be in different areas some meet. 
+This graph shows that there's some significant statistical differences among this collection of numerical explained by categorical variables. as all the different school levels seem to be in different to be in different areas some meet. however two of them stick out the most that being "Graduate" and "High school" in which gradutes has a lighter leve while high school as one of if not the lowest 
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=GSScsv)
+```
 
 ## Inferential Results
 
