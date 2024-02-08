@@ -44,7 +44,7 @@ basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
 
 basicCN + geom_boxplot()
 ```
-This graph shows that there's some significant statistical differences among this collection of numerical explained by categorical variables. as all the different school levels seem to be in different to be in different areas some meet. however two of them stick out the most that being "Graduate" and "High school" in which gradutes has a lighter leve while high school as one of if not the lowest 
+This graph shows that there's some significant statistical differences among this collection of numerical explained by categorical variables. as all the different school levels seem to be in different to be in different areas some meet. however two of them stick out the most that being "Graduate" and "High school" in which graduates has a lighter leve while high school as one of if not the lowest 
 
 ### Numerical Descriptive Results
 
@@ -60,6 +60,20 @@ Based on the data, it appears that graduates have the highest median value compa
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=GSScsv)
+summary.aov(model1)
+```
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 18.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+The graph shows that high school and graduate school are significantly different.
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+
+The graph shows significant differences in numerical values for different education levels. Graduates have the highest median value, while light high school students have the lowest median and mean values. The graph also highlights a substantial contrast between high school and graduate school. Overall, this information can be useful for informed decision-making and further analysis.
